@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: testbundle
+  m_EditorClassIdentifier: 
+  m_GroupName: testbundle
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f0b3d186c576d42449f19ca3e3f4fc68
+  m_SerializeEntries:
+  - m_GUID: b909cfad0a8809f44a3b206a75434d5a
+    m_Address: Assets/BundledAssets/testbundle/BundledSpriteObject.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b1ee87228667ed947a4bd11723437c1c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f759d54d7d0ed8040b630fcf7a5acfe4, type: 2}
+    - {fileID: 11400000, guid: aebd85f61c3ed8f45a81b04821ae0296, type: 2}
