@@ -4472,8 +4472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf45670c5cac8c42a266837094ea16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetName: testbundle
-  bundleName: BundledSpriteObject
+  assetName: BundledSpriteObject
+  bundleName: testbundle
 --- !u!114 &2040740219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4500,7 +4500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb71b6ad83552b49b85235daa197416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bundleUrl: http://localhost/assetbundles/testbundle
+  bundleUrl: http://localhost:8080/testbundle
   assetName: BundledSpriteObject
 --- !u!43 &2043328524
 Mesh:
