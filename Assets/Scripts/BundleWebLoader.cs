@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using ExitGames.Client.Photon.StructWrapping;
+using UnityEngine.Networking;
 
 public class BundleWebLoader : MonoBehaviour
 {
@@ -10,10 +12,10 @@ public class BundleWebLoader : MonoBehaviour
 
   private IEnumerator Start()
   {
-    using (WWW web = new WWW(bundleUrl))
+    using (UnityWebRequest  web =  UnityWebRequestAssetBundle.GetAssetBundle(bundleUrl))
     {
-      yield return web;
-      AssetBundle remoteAssetBundle = web.assetBundle;
+      yield return web.SendWebRequest();
+      AssetBundle remoteAssetBundle = DownloadHandlerAssetBundle.GetContent(web);
       if (remoteAssetBundle == null)
       {
         Debug.LogError("Failed to download AssetBundle");
