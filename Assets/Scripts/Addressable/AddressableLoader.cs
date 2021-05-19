@@ -8,35 +8,35 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class AddressableLoader : MonoBehaviour
 {
     // Start is called before the first frame update
-    // IEnumerator Start()
-    // {
-    //     AsyncOperationHandle<GameObject> a = Addressables.LoadAsset<GameObject>("Cube");
-    //
-    //     yield return a;
-    //
-    //     if (a.Status == AsyncOperationStatus.Succeeded)
-    //     {
-    //         Instantiate(a.Result);
-    //         Addressables.Release(a);
-    //     }
-    //     // Addressables.Instantiate<GameObject>("AssetAddress");
-    //
-    // }
-
-
-    public void Start()
+    IEnumerator Start()
     {
-        AsyncOperationHandle<GameObject> goHandle =  Addressables.LoadAssetAsync<GameObject>("Cube");
-        if (goHandle.Status == AsyncOperationStatus.Succeeded)
+        AsyncOperationHandle<GameObject> a = Addressables.LoadAssetAsync<GameObject>("Cube");
+        Debug.Log(a.PercentComplete * 100 + "% ");
+        yield return a;
+    
+        if (a.Status == AsyncOperationStatus.Succeeded)
         {
-            Debug.Log("Ok");
+            Debug.Log(a.PercentComplete  * 100 + "% ");
+            Addressables.InstantiateAsync(a.Result);
+            Addressables.Release(a);
         }
-
-        if (goHandle.Status == AsyncOperationStatus.Succeeded)
-        {
-            Debug.Log("Fail");
-        }
+        // Addressables.Instantiate<GameObject>("AssetAddress");
     }
+
+
+    // public void Start()
+    // {
+    //     AsyncOperationHandle<GameObject> goHandle =  Addressables.LoadAssetAsync<GameObject>("Cube");
+    //     if (goHandle.Status == AsyncOperationStatus.Succeeded)
+    //     {
+    //         Debug.Log("Ok");
+    //     }
+    //
+    //     if (goHandle.Status == AsyncOperationStatus.Succeeded)
+    //     {
+    //         Debug.Log("Fail");
+    //     }
+    // }
 
     // private IEnumerator Start()
     // {
